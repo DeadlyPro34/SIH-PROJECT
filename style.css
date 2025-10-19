@@ -1,11 +1,9 @@
-/* --- Global Styles & Reset --- */
+/* --- Variables & Reset --- */
 :root {
-    --color-primary-blue: #007bff; /* Used for links, buttons, and accents */
+    --color-primary-blue: #007bff;
     --color-text-dark: #1f1f1f;
     --color-text-light: #555555;
-    --color-background-light: #ffffff;
     --color-border: #e0e0e0;
-    --font-family-main: 'Inter', sans-serif;
 }
 
 * {
@@ -15,43 +13,33 @@
 }
 
 body {
-    font-family: var(--font-family-main);
+    /* Apply custom font globally */
+    font-family: 'Inter', sans-serif;
     color: var(--color-text-dark);
-    background-color: var(--color-background-light);
-    line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* --- Navigation & Logo --- */
+.logo {
+    font-weight: 800 !important;
+    font-size: 1.5rem !important;
+    color: var(--color-text-dark) !important;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-text-light);
-}
-
-ul {
-    list-style: none;
+/* Adjust nav links for better alignment on desktop */
+.nav-links-group {
+    gap: 15px;
+    /* Add spacing between links */
 }
 
 /* --- Buttons --- */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
 .btn-sign-in {
     background-color: var(--color-primary-blue);
-    color: white;
+    color: white !important;
     padding: 8px 20px;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    border-radius: 4px;
 }
 
 .btn-sign-in:hover {
@@ -60,90 +48,28 @@ ul {
 
 .btn-primary {
     background-color: transparent;
-    border: 1px solid var(--color-text-dark); /* Mimics the button outline */
-    color: var(--color-text-dark);
-    font-weight: 600;
-    padding: 12px 28px;
+    border: 1px solid var(--color-text-dark) !important;
+    color: var(--color-text-dark) !important;
+    font-weight: 600 !important;
+    padding: 12px 28px !important;
+    text-transform: capitalize;
 }
 
 .btn-primary:hover {
-    background-color: var(--color-border);
+    background-color: var(--color-border) !important;
 }
 
-/* --- Header & Navigation --- */
-.header {
-    border-bottom: 1px solid var(--color-border);
-    padding: 15px 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--color-text-dark);
-}
-
-.nav ul {
-    display: flex;
-    gap: 30px;
-    font-weight: 600;
-}
-
-.nav a {
-    color: var(--color-text-dark);
-}
-
-/* --- Hero Section --- */
-.hero {
-    padding: 80px 0 100px 0;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.hero-text {
-    flex: 1;
-    max-width: 50%;
-}
-
-.hero-text h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.hero-text h1 strong {
-    /* To ensure the bold text in the H1 has the correct font style */
-    font-weight: 800;
-}
-
-.hero-text p {
-    font-size: 1.15rem;
-    color: var(--color-text-light);
-    margin-bottom: 30px;
-}
-
-/* Hero Image Placeholder Styling */
+/* --- Hero Image Placeholder Styling (Custom Element) --- */
 .hero-image-placeholder {
-    flex: 1;
     min-height: 400px;
-    background-color: #f7f7f7; /* Light background for the placeholder */
+    background-color: #f7f7f7;
     border-radius: 8px;
     border: 1px solid var(--color-border);
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    /* Mimicking the grid pattern with a background image */
+    /* Mimic the grid pattern with a background image */
     background-image: repeating-linear-gradient(0deg, #e9e9e9, #e9e9e9 1px, transparent 1px, transparent 25px),
-                      repeating-linear-gradient(90deg, #e9e9e9, #e9e9e9 1px, transparent 1px, transparent 25px);
+        repeating-linear-gradient(90deg, #e9e9e9, #e9e9e9 1px, transparent 1px, transparent 25px);
     background-size: 25px 25px;
     background-position: 0 0;
 }
@@ -162,54 +88,25 @@ ul {
     border-radius: 50%;
 }
 
-.dot.red { background-color: #ff5f56; }
-.dot.yellow { background-color: #ffbd2e; }
-.dot.green { background-color: #27c93f; }
+.dot.red {
+    background-color: #ff5f56;
+}
+
+.dot.yellow {
+    background-color: #ffbd2e;
+}
+
+.dot.green {
+    background-color: #27c93f;
+}
 
 /* --- Footer --- */
-.footer {
-    border-top: 1px dotted var(--color-border); /* Dashed border for visual effect */
-    padding: 40px 0;
-    background-color: #fcfcfc;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr; /* Adjust columns for layout */
-    gap: 40px;
-}
-
-.footer-logo {
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: var(--color-text-dark);
-}
-
-.footer-about p {
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    margin-bottom: 15px;
-}
-
-.social-links .icon {
+.social-links a {
+    /* Style the emoji icons */
     font-size: 1.2rem;
-    margin-right: 15px;
     color: var(--color-text-light);
 }
 
-.footer-links-group h5 {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: var(--color-text-dark);
-}
-
-.footer-links-group ul li {
-    margin-bottom: 8px;
-}
-
-.footer-links-group a {
-    font-size: 0.9rem;
-    color: var(--color-text-light);
+.footer-links-group a:hover {
+    color: var(--color-primary-blue) !important;
 }

@@ -1,0 +1,71 @@
+/* --- Variables & Reset (Keep the original custom variables) --- */
+:root {
+    --color-primary-blue: #007bff;
+    --color-text-dark: #1f1f1f;
+    --color-text-light: #555555;
+    --font-family-main: 'Inter', sans-serif;
+}
+
+* {
+    /* Keep margin/padding reset for consistency */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Set the custom font globally */
+    font-family: var(--font-family-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* Custom styling to match the font weight and size of the logo */
+.logo {
+    font-weight: 800 !important; /* Force extra bold weight */
+    font-size: 1.3rem !important;
+    color: var(--color-text-dark) !important;
+}
+
+/* --- Hero Section Overrides --- */
+.eyebrow-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    margin-bottom: 5px;
+}
+
+.hero-title {
+    /* Custom font-size and line-height for the H1 */
+    font-size: 3rem !important; 
+    line-height: 1.1 !important;
+}
+
+/* --- Quote Section Overrides --- */
+.quote {
+    /* Ensure the quote maintains its specific size and weight */
+    font-size: 2.2rem !important;
+    line-height: 1.3;
+    font-weight: 800 !important;
+    padding: 0; /* Remove potential extra padding from blockquote */
+}
+
+/* --- Feature Card Overrides --- */
+.feature-card {
+    /* Override Bootstrap's default border-color if needed */
+    border-color: #e0e0e0 !important; 
+    /* Ensure the background is white if the parent section has a color */
+    background-color: white; 
+}
+
+/* --- Footer Overrides --- */
+.social-links a {
+    /* Styling for the social media icons/placeholders */
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+}
+
+.footer-links-group a:hover,
+.nav-link:hover {
+    color: var(--color-primary-blue) !important;
+}
