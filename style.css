@@ -1,3 +1,6 @@
+/* ======================================= */
+/* 1. GLOBAL & RESET STYLES */
+/* ======================================= */
 * {
     font-family: 'Poppins', sans-serif; 
     margin: 0;
@@ -6,70 +9,114 @@
     color: #1a1a1a;
 }
 
-/* --- Navigation Bar --- */
-.navbar {
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif; 
+    background-color: white;
+}
+
+/* ======================================= */
+/* 2. TOP NAVIGATION BAR (DESKTOP/BASE) */
+/* ======================================= */
+.fixed-nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.centered-nav {
+    background-color: #75b2c8;
+    background: transparent radial-gradient(#43919a, transparent); 
+    color: white;
+    border-radius: 20px;
+    padding: 10px 25px;
+    display: flex;
     align-items: center;
-    padding: 20px 80px;
-    background: transparent;
-    background-color: rgba(12, 3, 51, 0.3);
-    z-index: 100;
-    transition: box-shadow .4s, background-color .4s;
-    border-bottom: 1px solid #eee; 
+    justify-content: space-between;
+    width: 74%;
+    max-width: 1200px;
 }
 
-header {
-    box-shadow: 0 2px 16px hsla #0902021a(0, 67%, 2%, 0.1);
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
 }
 
-.logo {
+.logo-img {
+    height: 30px;
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.logo-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* Desktop Links */
+#desktop-nav-links {
+    display: flex;
+    align-items: center;
+}
+
+#desktop-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 15px;
+    margin: 0 5px;
+    transition: opacity 0.2s;
     display: flex; 
     align-items: center;
 }
 
-.logo-img {
-    height: 30px; 
-    width: auto;
-    margin-right: 10px; 
+#desktop-nav-links a i {
+    margin-right: 8px;
+    color: white;
 }
 
-.logo span {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-
-/* ... rest of the CSS remains the same ... */
-.navbar nav a {
-    text-decoration: none;
-    color: #4a4a4a;
-    margin-left: 30px;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.navbar nav a:hover {
-    color: #007bff; 
+#desktop-nav-links a:hover {
+    opacity: 0.8;
 }
 
 .sign-in-btn {
-    background-color: #6596bd; 
-    color: white;
-    padding: 10px 20px;
+    background-color: white;
+    color: black;
     border: none;
-    border-radius: 5px;
+    margin-left: 20px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
     cursor: pointer;
-    font-weight: 600;
-    margin-left: 30px;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
 .sign-in-btn:hover {
-    background-color: #6A1B9A;
+    background-color: #eee;
 }
 
-/* --- Hero Section --- */
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 15px 0px;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: block;
+}
+
+/* ======================================= */
+/* 3. HERO SECTION STYLES */
+/* ======================================= */
 .hero-section {
     display: flex;
     align-items: center;
@@ -115,7 +162,6 @@ header {
     color: white;
 }
 
-/* --- Image Container --- */
 .image-container {
     flex: 1;
     display: flex;
@@ -129,4 +175,325 @@ header {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+} 
+
+/* ======================================= */
+/* 4. LOGO CAROUSEL / MARQUEE STYLES */
+/* ======================================= */
+.company{ 
+    padding: 4% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.my-main-swiper {
+    width: 90%;
+    height: 300px;
+    background: #D8C8FF;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.custom-marquee-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 0px;
+    height: 100%;
+}
+
+.marquee-row {
+    width: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    display: flex;
+    font-size: 1.2em; 
+    font-weight: 700;
+    color: #ecf0f1;
+    background: transparent radial-gradient(#6E60A8, transparent);
+    backdrop-filter: blur(5px); 
+    padding: 25px 0; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    margin: 8px 0;
+}
+
+.marquee-content {
+    display: inline-flex; 
+    align-items: center;
+    flex-shrink: 0; 
+    padding: 0 0px;
+}
+
+.marquee-content span {
+    margin: 0 0 0 8px;
+    color: #e0f7fa; 
+    text-shadow: 0 0 4px #000; 
+    transition: transform 0.3s ease;
+}
+
+/* Style for the separator pipe */
+.marquee-content span:nth-child(even) {
+    margin-right: 20px;
+}
+
+.marquee-content span:hover {
+    transform: translateY(-2px) scale(1.05); 
+    color: #ffffff;
+}
+
+.marquee-content img {
+    height: 25px;
+    width: auto;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5)); 
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); } 
+}
+
+@keyframes scroll-right {
+    from { transform: translateX(-100%); } 
+    to { transform: translateX(0%); } 
+}
+
+.marquee-left .marquee-content {
+    animation: scroll-left 45s linear infinite; 
+}
+
+.marquee-right .marquee-content {
+    animation: scroll-right 35s linear infinite;
+}
+
+/* BOTTOM MOBILE NAV BAR */
+.bottom-nav-bar {
+    display: none; /* Hidden on desktop */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+   background: radial-gradient(#24646c, transparent);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.bottom-nav-bar .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7); 
+    /* Increased padding/area for touch target */
+    padding: 8px 5px; 
+    flex-grow: 1; 
+    transition: color 0.3s ease;
+}
+
+.bottom-nav-bar .nav-item i {
+    font-size: 1.5em; 
+    margin-bottom: 0;
+    color: inherit; 
+}
+
+/* Text labels are shown by default for compatibility, then hidden in media query */
+.bottom-nav-bar .nav-item span {
+    color: inherit; 
+    font-size: 0.75em; 
+    display: block;
+}
+
+.bottom-nav-bar .nav-item:hover,
+.bottom-nav-bar .nav-item.active {
+    color: white; 
+}
+
+
+/* ======================================= */
+/* 6. MEDIA QUERIES */
+/* ======================================= */
+
+/* 📱 Max Width: 540px (Small Mobile) */
+@media (max-width: 540px) {
+    /* Top Nav Simplification */
+    .centered-nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+        border-radius: 0;
+    }
+    .nav-left {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    /* Hero Section */
+    .text-content h1 {
+        font-size: 32px;
+    }
+    .text-content p {
+        font-size: 16px;
+    }
+    .image-container img {
+        max-width: 90%; 
+    }
+    
+    /* Logo Marquee (Smallest size) */
+    .marquee-row {
+        font-size: 1rem;
+        padding: 20px 0; 
+    }
+    .marquee-content img {
+        height: 25px;
+    }
+    .marquee-content span:nth-child(even) { 
+        margin-right: 25px; 
+    }
+    .marquee-left .marquee-content {
+        animation-duration: 40s; 
+    }
+    .marquee-right .marquee-content {
+        animation-duration: 30s; 
+    }
+    
+    /* Bottom Nav Refinement */
+    .bottom-nav-bar .nav-item {
+        font-size: 0.7em;
+        padding: 3px;
+    }
+    .bottom-nav-bar .nav-item i {
+        font-size: 1.3em;
+    }
+}
+
+
+/* 💻 Max Width: 768px (Mobile/Tablet Transition) */
+@media (max-width: 768px) {
+    /* --- NAVIGATION SWITCH (KEY CHANGE) --- */
+    #desktop-nav-links {
+        display: none; /* Hides top desktop navigation */
+    }
+    .bottom-nav-bar {
+        display: flex; /* Displays the bottom icon navigation bar */
+        padding: 10px 0;
+    }
+    .bottom-nav-bar .nav-item span {
+        /* Hides text labels for icon-only navigation */
+        display: none; 
+    }
+    .bottom-nav-bar .nav-item i {
+        /* Adjust icon size when text is hidden */
+        font-size: 1.7em; 
+        margin-bottom: 0;
+    }
+    /* -------------------------------------- */
+    
+    /* Top Nav Simplification */
+    .fixed-nav-wrapper {
+        padding: 10px 0; 
+    }
+    .centered-nav {
+        width: 90%; 
+        padding: 10px 15px;
+        border-radius: 10px; 
+    }
+    .nav-left {
+        width: 100%;
+        justify-content: center; /* Center logo/name */
+        margin-right: 0;
+    }
+    
+    /* Hero Section Stacking */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        padding: 100px 3%;
+    }
+    .text-content,
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .text-content {
+        order: 1;
+    }
+    .image-container {
+        order: 2;
+        justify-content: center;
+    }
+    .text-content h1 {
+        font-size: 40px;
+    }
+
+    /* Logo Marquee (Medium size) */
+    .marquee-row {
+        font-size: 1.6em;
+        padding: 15px 0;
+    }
+    .marquee-content img {
+        height: 32px; 
+    }
+    .marquee-content span {
+        margin: 0 0 0 10px; 
+    }
+    .marquee-content span:nth-child(even) {
+        margin-right: 30px;
+    }
+    .marquee-left .marquee-content {
+        animation-duration: 35s; 
+    }
+    .marquee-right .marquee-content {
+        animation-duration: 25s; 
+    }
+}
+
+
+/* 🖥️ Max Width: 1220px (Larger Desktops/Laptops) */
+@media (max-width: 1220px) {
+    /* Top Nav */
+    .centered-nav {
+        width: 95%;
+        max-width: none;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 60px 3%;
+    }
+    .text-content h1 {
+        font-size: 48px;
+    }
+
+    /* Logo Marquee (Desktop size adjustment) */
+    .my-main-swiper {
+        font-size: x-small; 
+    }
+    .marquee-row {
+        font-size: 1rem; 
+        padding: 26px 0;
+    }
+    .marquee-content img {
+        height: 36px; 
+    }
+    .marquee-content span:nth-child(even) {
+        margin-right: 40px; 
+    }
+    .marquee-left .marquee-content {
+        animation-duration: 30s; 
+    }
+    .marquee-right .marquee-content {
+        animation-duration: 20s; 
+    }
 }

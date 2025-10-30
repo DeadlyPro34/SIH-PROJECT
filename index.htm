@@ -5,23 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLACEMINT - Kickstart Your Career</title>
+    <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="PLACEMINT Logo" class="logo-img">PLACEMINT
-        </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Internships</a>
-            <a href="#">Jobs</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact Us</a>
-            <button class="sign-in-btn">SIGN IN</button>
+    <header class="fixed-nav-wrapper">
+        <nav class="centered-nav">
+            <div class="nav-left">
+                <img src="logo.png" alt="PLACEMINT Logo" class="logo-img">
+                <span class="logo-name">PLACEMINT</span>
+            </div>
+
+            <div class="nav-right" id="desktop-nav-links">
+                <a href="#">Home</a>
+                <a href="#">Internships</a>
+                <a href="#">Jobs</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+                <button class="sign-in-btn">SIGN IN</button>
+            </div>
+
+            <nav class="bottom-nav-bar" id="mobile-bottom-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Internships</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Jobs</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Sign In</span>
+                </a>
+            </nav>
         </nav>
     </header>
 
@@ -31,14 +62,125 @@
             <p>Find the best internships and industrial jobs that match your skills and goals.</p>
             <button class="explore-btn">Explore Opportunities</button>
         </div>
-
         <div class="image-container">
-            <img id="mainImage" src="IMG_0089.JPG" alt="Application Mockup">
+            <img id="mainImage" src="Mint bg.jpg" alt="Application Mockup">
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <section id="logo-carousel-marquee" class="company">
+        <div class="swiper my-main-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide custom-marquee-slide">
 
+                    <div class="marquee-row marquee-right">
+                        <div class="marquee-content">
+                            <img src="logo/AAPL.png" alt="Apple Logo"><span>Apple</span>
+                            <img src="logo/google.png" alt="Google Logo"><span>Google</span>
+                            <img src="logo/MSFT.png" alt="Microsoft Logo"><span>Microsoft</span>
+                            <img src="logo/AMZN.png" alt="Amazon Logo"><span>Amazon</span>
+                            <img src="logo/TSLA.png" alt="Tesla Logo"><span>Tesla</span>
+                            <img src="logo/NFLX.png" alt="Netflix Logo"><span>Netflix</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <img src="logo/AAPL.png" alt="Apple Logo"><span>Apple</span>
+                            <img src="logo/google.png" alt="Google Logo"><span>Google</span>
+                            <img src="logo/MSFT.png" alt="Microsoft Logo"><span>Microsoft</span>
+                            <img src="logo/AMZN.png" alt="Amazon Logo"><span>Amazon</span>
+                            <img src="logo/TSLA.png" alt="Tesla Logo"><span>Tesla</span>
+                            <img src="logo/NFLX.png" alt="Netflix Logo"><span>Netflix</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <img src="logo/AAPL.png" alt="Apple Logo"><span>Apple</span>
+                            <img src="logo/google.png" alt="Google Logo"><span>Google</span>
+                            <img src="logo/MSFT.png" alt="Microsoft Logo"><span>Microsoft</span>
+                            <img src="logo/AMZN.png" alt="Amazon Logo"><span>Amazon</span>
+                            <img src="logo/TSLA.png" alt="Tesla Logo"><span>Tesla</span>
+                            <img src="logo/NFLX.png" alt="Netflix Logo"><span>Netflix</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-row marquee-left">
+                        <div class="marquee-content">
+                            <img src="logo/005930.KS.png" alt="Samsung Logo"><span>Samsung</span>
+                            <img src="logo/SONY.png" alt="Sony Logo"><span>Sony</span>
+                            <img src="logo/Meta-Emblem.png" alt="Meta Logo"><span>Meta</span>
+                            <img src="logo/ADBE.png" alt="Adobe Logo"><span>Adobe</span>
+                            <img src="logo/NVDA.png" alt="Nvidia Logo"><span>Nvidia</span>
+                            <img src="logo/INTC.png" alt="Intel Logo"><span>Intel</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <img src="logo/005930.KS.png" alt="Samsung Logo"><span>Samsung</span>
+                            <img src="logo/SONY.png" alt="Sony Logo"><span>Sony</span>
+                            <img src="logo/Meta-Emblem.png" alt="Meta Logo"><span>Meta</span>
+                            <img src="logo/ADBE.png" alt="Adobe Logo"><span>Adobe</span>
+                            <img src="logo/NVDA.png" alt="Nvidia Logo"><span>Nvidia</span>
+                            <img src="logo/INTC.png" alt="Intel Logo"><span>Intel</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <img src="logo/005930.KS.png" alt="Samsung Logo"><span>Samsung</span>
+                            <img src="logo/SONY.png" alt="Sony Logo"><span>Sony</span>
+                            <img src="logo/Meta-Emblem.png" alt="Meta Logo"><span>Meta</span>
+                            <img src="logo/ADBE.png" alt="Adobe Logo"><span>Adobe</span>
+                            <img src="logo/NVDA.png" alt="Nvidia Logo"><span>Nvidia</span>
+                            <img src="logo/INTC.png" alt="Intel Logo"><span>Intel</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-row marquee-right">
+                        <div class="marquee-content">
+                            <img src="logo/DIS.png" alt="Disney Logo"><span>Disney</span>
+                            <img src="logo/BMW.DE.png" alt="BMW Logo"><span>BMW</span>
+                            <img src="logo/TM.png" alt="Toyota Logo"><span>Toyota</span>
+                            <img src="logo/spacex.png" alt="SpaceX Logo"><span>SpaceX</span>
+                            <img src="logo/CRM.png" alt="Salesforce Logo"><span>Salesforce</span>
+                            <img src="logo/ORCL.png" alt="Oracle Logo"><span>Oracle</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <img src="logo/DIS.png" alt="Disney Logo"><span>Disney</span>
+                            <img src="logo/BMW.DE.png" alt="BMW Logo"><span>BMW</span>
+                            <img src="logo/TM.png" alt="Toyota Logo"><span>Toyota</span>
+                            <img src="logo/spacex.png" alt="SpaceX Logo"><span>SpaceX</span>
+                            <img src="logo/CRM.png" alt="Salesforce Logo"><span>Salesforce</span>
+                            <img src="logo/ORCL.png" alt="Oracle Logo"><span>Oracle</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <img src="logo/DIS.png" alt="Disney Logo"><span>Disney</span>
+                            <img src="logo/BMW.DE.png" alt="BMW Logo"><span>BMW</span>
+                            <img src="logo/TM.png" alt="Toyota Logo"><span>Toyota</span>
+                            <img src="logo/spacex.png" alt="SpaceX Logo"><span>SpaceX</span>
+                            <img src="logo/CRM.png" alt="Salesforce Logo"><span>Salesforce</span>
+                            <img src="logo/ORCL.png" alt="Oracle Logo"><span>Oracle</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script>
+        // Swiper Initialization for Logo Carousel
+        new Swiper('.my-main-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            allowTouchMove: false,
+        });
+
+        // Bottom Nav Active Class Toggling
+        document.addEventListener('DOMContentLoaded', () => {
+            const navItems = document.querySelectorAll('.bottom-nav-bar .nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    navItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script> -->
 </body>
 
 </html>
