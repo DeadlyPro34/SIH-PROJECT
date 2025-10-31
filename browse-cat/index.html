@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERNSHIP-CAT</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-nav-wrapper">
+        <nav class="centered-nav">
+            <div class="nav-left">
+                <img src="logo.png" alt="PLACEMINT Logo" class="logo-img">
+                <span class="logo-name">PLACEMINT</span>
+            </div>
+
+            <div class="nav-right" id="desktop-nav-links">
+                <a href="../index.htm" class="home-nav-link">Home</a>
+                
+                <div class="search-bar-container">
+                    <input type="text" placeholder="Search internships, jobs..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+
+            <nav class="bottom-nav-bar" id="mobile-bottom-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Internships</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Jobs</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Sign In</span>
+                </a>
+            </nav>
+        </nav>
+    </header>
+
+    <div style="height: 80px;"></div>
+
+    <section class="internship-listing-section">
+        <div class="main-content-grid">
+            
+            <aside class="sidebar-filters">
+                
+                <div class="filter-block">
+                    <div class="filter-header">
+                        <h3>Education Level</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="filter-body active">
+                        <div class="search-filter-input">
+                            <input type="text" placeholder="Search Education">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <label class="filter-checkbox"><input type="checkbox"> LLM</label>
+                        <label class="filter-checkbox"><input type="checkbox"> B.Arch</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Diploma</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Certificate Course (ITI)</label>
+                        <label class="filter-checkbox"><input type="checkbox"> M Phil / Ph.D</label>
+                    </div>
+                </div>
+                
+                <div class="filter-block">
+                    <div class="filter-header">
+                        <h3>Location</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div> 
+                    <div class="filter-body active">
+                        <div class="search-filter-input">
+                            <input type="text" placeholder="Search Location">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <label class="filter-checkbox"><input type="checkbox"> Delhi</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Ahmedabad</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Gurgaon</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Bangalore</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Mumbai</label>
+                    </div>
+                </div>
+
+                <div class="filter-block collapsed">
+                    <div class="filter-header">
+                        <h3>Job Type</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="filter-body">
+                        <label class="filter-checkbox"><input type="checkbox"> Full-Time</label>
+                        <label class="filter-checkbox"><input type="checkbox"> Part-Time</label>
+                    </div>
+                </div>
+                <div class="filter-block collapsed">
+                    <div class="filter-header">
+                        <h3>Experience</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="filter-body">
+                         <label class="filter-checkbox"><input type="checkbox"> Fresher</label>
+                        <label class="filter-checkbox"><input type="checkbox"> 1-3 Years</label>
+                    </div>
+                </div>
+                <div class="filter-block collapsed">
+                    <div class="filter-header">
+                        <h3>Work From Home</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="filter-body">
+                        <label class="filter-checkbox"><input type="checkbox"> Yes</label>
+                    </div>
+                </div>
+
+            </aside>
+
+            <main class="job-cards-grid">
+                
+                <!-- Updated Card 1: Frontend Development Intern -->
+                <div class="job-card">
+                    <h4>Frontend Development Intern</h4>
+                    <p class="card-subtitle">For individuals in Computer Science / Design</p>
+                    <div class="card-details">
+                        <!-- Location Icon -->
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Remote (Work From Home)</p>
+                        <!-- Duration Icon -->
+                        <p><i class="fas fa-briefcase"></i> Duration: 6 Months</p>
+                        <!-- Stipend Icon -->
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹25,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+                
+                <!-- Updated Card 2: Financial Analyst Intern -->
+                <div class="job-card">
+                    <h4>Financial Analyst Intern</h4>
+                    <p class="card-subtitle">For individuals in Finance / Economics</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: On-site (Mumbai, Maharashtra)</p>
+                        <p><i class="fas fa-briefcase"></i> Experience: Advanced Excel Skills Required</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹35,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+                
+                <!-- Updated Card 3: Digital Marketing Specialist -->
+                <div class="job-card">
+                    <h4>Digital Marketing Specialist</h4>
+                    <p class="card-subtitle">For individuals in Marketing / Communications</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Hybrid (Bangalore, Karnataka)</p>
+                        <p><i class="fas fa-briefcase"></i> Experience: SEO/SEM Required</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹20,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+                
+                <!-- Updated Card 4: Data Science Trainee -->
+                <div class="job-card">
+                    <h4>Data Science Trainee</h4>
+                    <p class="card-subtitle">For individuals in Statistics / AI</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Remote (Flexible Hours)</p>
+                        <p><i class="fas fa-briefcase"></i> Experience: Python/Pandas Proficiency</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹30,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+
+                <!-- Updated Card 5: Backend Engineer Intern -->
+                <div class="job-card">
+                    <h4>Backend Engineer Intern</h4>
+                    <p class="card-subtitle">For individuals in Software Engineering / DevOps</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Hybrid (New Delhi)</p>
+                        <p><i class="fas fa-briefcase"></i> Duration: 9 Months</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹40,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+
+                <!-- Updated Card 6: UX/UI Design Intern -->
+                <div class="job-card">
+                    <h4>UX/UI Design Intern</h4>
+                    <p class="card-subtitle">For individuals in Design / HCI</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Remote (Global)</p>
+                        <p><i class="fas fa-briefcase"></i> Duration: 3 Months</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹20,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+
+                <!-- Updated Card 7: Content Writer Intern -->
+                <div class="job-card">
+                    <h4>Content Writer Intern</h4>
+                    <p class="card-subtitle">For individuals in Journalism / English Literature</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: On-site (Hyderabad, Telangana)</p>
+                        <p><i class="fas fa-briefcase"></i> Duration: 4 Months</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹15,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+
+                <!-- Updated Card 8: Business Development Intern -->
+                <div class="job-card">
+                    <h4>Business Development Intern</h4>
+                    <p class="card-subtitle">For individuals in Business Management / Sales</p>
+                    <div class="card-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Hybrid (Pune, Maharashtra)</p>
+                        <p><i class="fas fa-briefcase"></i> Duration: 6 Months</p>
+                        <p><i class="fas fa-money-bill-wave"></i> Stipend: ₹30,000/Month</p>
+                    </div>
+                    <button class="apply-now-btn">Apply Now</button>
+                </div>
+                
+            </main>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
