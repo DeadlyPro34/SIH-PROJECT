@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -158,29 +157,156 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script>
-        // Swiper Initialization for Logo Carousel
-        new Swiper('.my-main-swiper', {
-            direction: 'horizontal',
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            allowTouchMove: false,
-        });
+    <section class="internship-section">
+        <h2 class="section-title">Featured Internships</h2>
 
-        // Bottom Nav Active Class Toggling
-        document.addEventListener('DOMContentLoaded', () => {
-            const navItems = document.querySelectorAll('.bottom-nav-bar .nav-item');
-            navItems.forEach(item => {
-                item.addEventListener('click', function (e) {
-                    navItems.forEach(i => i.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
+        <div class="swiper internship-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="internship-card swiper-slide">
+                    <h3>Data Science & AI/ML</h3>
+                    <p>For individuals in Advanced Analytics</p>
+                    <ul>
+                        <li>
+                            <i class="feature-icon fa-solid fa-location-dot"></i>
+                            **Location:** Remote (India Time Zones)
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-briefcase"></i>
+                            **Experience:** Strong Python/TensorFlow skills
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-money-bill-wave"></i>
+                            **Stipend:** ₹60,000/Month
+                        </li>
+                    </ul>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+
+                <div class="internship-card swiper-slide">
+                    <h3>Software Development (Frontend)</h3>
+                    <p>For individuals in Computer Science</p>
+                    <ul>
+                        <li>
+                            <i class="feature-icon fa-solid fa-location-dot"></i>
+                            **Location:** Hybrid (Bangalore / Pune)
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-briefcase"></i>
+                            **Experience:** 1+ year React/Vue experience
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-money-bill-wave"></i>
+                            **Stipend:** ₹50,000/Month
+                        </li>
+                    </ul>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+
+                <div class="internship-card swiper-slide">
+                    <h3>Product Management Associate</h3>
+                    <p>For individuals in Business/Strategy</p>
+                    <ul>
+                        <li>
+                            <i class="feature-icon fa-solid fa-location-dot"></i>
+                            **Location:** On-site (Mumbai / Gurgaon)
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-briefcase"></i>
+                            **Experience:** Prior market research background
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-money-bill-wave"></i>
+                            **Stipend:** ₹45,000/Month
+                        </li>
+                    </ul>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+
+                <div class="internship-card swiper-slide">
+                    <h3>UX/UI Design Intern</h3>
+                    <p>For individuals in Visual Communications</p>
+                    <ul>
+                        <li>
+                            <i class="feature-icon fa-solid fa-location-dot"></i>
+                            **Location:** Remote (India - Flexible Hours)
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-briefcase"></i>
+                            **Experience:** Portfolio demonstrating Figma mastery
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-money-bill-wave"></i>
+                            **Stipend:** ₹40,000/Month
+                        </li>
+                    </ul>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+
+                <div class="internship-card swiper-slide">
+                    <h3>Corporate Finance Associate</h3>
+                    <p>For individuals in Economics & Finance</p>
+                    <ul>
+                        <li>
+                            <i class="feature-icon fa-solid fa-location-dot"></i>
+                            **Location:** On-site (New Delhi / Pune)
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-briefcase"></i>
+                            **Experience:** Familiarity with valuation methods
+                        </li>
+                        <li>
+                            <i class="feature-icon fa-solid fa-money-bill-wave"></i>
+                            **Stipend:** ₹65,000/Month
+                        </li>
+                    </ul>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="pagination-and-view">
+            <div class="swiper-pagination custom-pagination"></div>
+
+            <a href="#" class="view-more">View more
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js">
+        // Initialize the Internship Swiper
+        const swiper = new Swiper('.internship-swiper', {
+            // Optional parameters
+            loop: true,
+            grabCursor: true,
+            spaceBetween: 20,
+
+            // Pagination setup
+            pagination: {
+                el: '.custom-pagination',
+                clickable: true,
+            },
+
+            // Responsive Breakpoints
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                }
+            }
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

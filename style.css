@@ -2,7 +2,7 @@
 /* 1. GLOBAL & RESET STYLES */
 /* ======================================= */
 * {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
 
 body {
     margin: 0;
-    font-family: 'Poppins', Arial, sans-serif; 
+    font-family: 'Poppins', Arial, sans-serif;
     background-color: white;
 }
 
@@ -31,7 +31,7 @@ body {
 
 .centered-nav {
     background-color: #75b2c8;
-    background: transparent radial-gradient(#43919a, transparent); 
+    background: transparent radial-gradient(#EAE6DB, transparent);
     color: white;
     border-radius: 20px;
     padding: 10px 25px;
@@ -59,7 +59,7 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
-    color: white;
+    color: #4B5A47;
 }
 
 /* Desktop Links */
@@ -69,13 +69,13 @@ body {
 }
 
 #desktop-nav-links a {
-    color: white;
+    color: #4B5A47;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 15px;
     padding: 10px 15px;
     margin: 0 5px;
     transition: opacity 0.2s;
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
@@ -90,7 +90,7 @@ body {
 
 .sign-in-btn {
     background-color: white;
-    color: black;
+    color: #4B5A47;
     border: none;
     margin-left: 20px;
     padding: 12px 20px;
@@ -122,13 +122,13 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 100px 80px;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .text-content {
-    flex: 1; 
-    max-width: 50%; 
+    flex: 1;
+    max-width: 50%;
 }
 
 .text-content h1 {
@@ -171,27 +171,27 @@ body {
 
 .image-container img {
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-} 
+}
 
 /* ======================================= */
 /* 4. LOGO CAROUSEL / MARQUEE STYLES */
 /* ======================================= */
-.company{ 
+.company {
     padding: 4% 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .my-main-swiper {
     width: 90%;
     height: 300px;
-    background: #D8C8FF;
+    background: #DCD7C9;
     border: none;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -209,31 +209,31 @@ body {
 
 .marquee-row {
     width: 100%;
-    white-space: nowrap; 
-    overflow: hidden; 
+    white-space: nowrap;
+    overflow: hidden;
     display: flex;
-    font-size: 1.2em; 
+    font-size: 1.2em;
     font-weight: 700;
     color: #ecf0f1;
-    background: transparent radial-gradient(#6E60A8, transparent);
-    backdrop-filter: blur(5px); 
-    padding: 25px 0; 
+    background: transparent radial-gradient(#4b5a47a0, transparent);
+    backdrop-filter: blur(5px);
+    padding: 25px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin: 8px 0;
 }
 
 .marquee-content {
-    display: inline-flex; 
+    display: inline-flex;
     align-items: center;
-    flex-shrink: 0; 
+    flex-shrink: 0;
     padding: 0 0px;
 }
 
 .marquee-content span {
     margin: 0 0 0 8px;
-    color: #e0f7fa; 
-    text-shadow: 0 0 4px #000; 
+    color: #e0f7fa;
+    text-shadow: 0 0 4px #000;
     transition: transform 0.3s ease;
 }
 
@@ -243,7 +243,7 @@ body {
 }
 
 .marquee-content span:hover {
-    transform: translateY(-2px) scale(1.05); 
+    transform: translateY(-2px) scale(1.05);
     color: #ffffff;
 }
 
@@ -252,21 +252,31 @@ body {
     width: auto;
     vertical-align: middle;
     margin-bottom: 2px;
-    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5)); 
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 }
 
 @keyframes scroll-left {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-100%); } 
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes scroll-right {
-    from { transform: translateX(-100%); } 
-    to { transform: translateX(0%); } 
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 .marquee-left .marquee-content {
-    animation: scroll-left 45s linear infinite; 
+    animation: scroll-left 45s linear infinite;
 }
 
 .marquee-right .marquee-content {
@@ -275,12 +285,13 @@ body {
 
 /* BOTTOM MOBILE NAV BAR */
 .bottom-nav-bar {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-   background: radial-gradient(#24646c, transparent);
+    background: radial-gradient(#24646c, transparent);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
     z-index: 2000;
     justify-content: space-around;
@@ -293,31 +304,246 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7); 
+    color: rgba(255, 255, 255, 0.7);
     /* Increased padding/area for touch target */
-    padding: 8px 5px; 
-    flex-grow: 1; 
+    padding: 8px 5px;
+    flex-grow: 1;
     transition: color 0.3s ease;
 }
 
 .bottom-nav-bar .nav-item i {
-    font-size: 1.5em; 
+    font-size: 1.5em;
     margin-bottom: 0;
-    color: inherit; 
+    color: inherit;
 }
 
 /* Text labels are shown by default for compatibility, then hidden in media query */
 .bottom-nav-bar .nav-item span {
-    color: inherit; 
-    font-size: 0.75em; 
+    color: inherit;
+    font-size: 0.75em;
     display: block;
 }
 
 .bottom-nav-bar .nav-item:hover,
 .bottom-nav-bar .nav-item.active {
-    color: white; 
+    color: white;
 }
 
+
+/* Main Section Styling */
+.internship-section {
+    /* Increased max-width for better fitting of 3 cards */
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.2em;
+    /* Slightly larger title */
+    font-weight: 700;
+    margin-bottom: 45px;
+    /* More space below title */
+    color: #2c3e50;
+    /* Darker title color */
+}
+
+/* Swiper Container */
+.swiper.internship-swiper {
+    padding-bottom: 60px;
+    /* More space for the bottom pagination */
+}
+
+/* Individual Card Styling */
+.internship-card {
+        /* Revert to fluid width and proportional height for mobile/tablet */
+        width: 100%; 
+        height: 300px; 
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    /* Subtle gradient background */
+    padding: 25px;
+    border-radius: 12px;
+    /* Slightly more rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    /* More pronounced shadow */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* 🌟 CHANGE: Setting explicit width to match height (300px) */
+    width: 300px; 
+    height: 300px; /* Kept existing height */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transition for hover */
+    border: 1px solid #e0e6ed;
+    /* Subtle border for definition */
+    margin: 0 auto; /* Center card if fewer than 3 fit */
+}
+
+.internship-card:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    /* Larger shadow on hover */
+    transform: translateY(-5px);
+    /* Lift card on hover */
+}
+
+@media (max-width: 991px) {
+    .internship-card {
+        /* Revert to fluid width and proportional height for mobile/tablet */
+        width: 100%; 
+        height: 300px; 
+    }
+}
+
+/* Swiper Slide (The card wrapper) */
+.swiper-slide {
+    height: auto;
+}
+
+.internship-card h3 {
+    font-size: 1.25em;
+    /* Slightly larger heading */
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
+    /* More space below heading */
+    color: #34495e;
+    /* Darker text color */
+}
+
+.internship-card p {
+    font-size: 0.95em;
+    /* Slightly larger paragraph */
+    color: #7f8c8d;
+    /* Muted grey for description */
+    margin-bottom: 25px;
+    /* More space below description */
+}
+
+/* List Styling (The features) */
+.internship-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: auto;
+    flex-grow: 1;
+}
+
+.internship-card li {
+    font-size: 20px;
+    /* Standard font size for list items */
+    color: #34495e;
+    /* Darker text color */
+    margin-bottom: 12px;
+    /* Increased margin for better spacing */
+    display: flex;
+    align-items: center;
+}
+
+/* Icon Styling (Thematic Font Awesome Icons) */
+.feature-icon {
+    color: #7A8670;
+    margin-right: 10px;
+    min-width: 18px;
+    height: 18px;
+    width: 18px;
+    font-size: 1.1em;
+    /* Set font size for FA icon */
+    display: flex;
+    /* Ensure center alignment */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Apply Button Styling */
+.apply-button {
+    background-color: #DCD7C9;
+    color: #4B5A47;
+    border: none;
+    border-radius: 6px;
+    /* Slightly more rounded button */
+    padding: 12px 0;
+    /* More padding for button */
+    cursor: pointer;
+    font-size: 1.05em;
+    /* Slightly larger button text */
+    font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    /* More space above button */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.apply-button:hover {
+    background-color: #4B5A47;
+    transform: translateY(-2px);
+    /* Slight lift on button hover */
+}
+
+/* Pagination and View More Link Layout */
+.pagination-and-view {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Swiper Pagination Styling (to match the design) */
+.custom-pagination {
+    position: relative !important;
+    bottom: unset !important;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    /* Space between dots */
+}
+
+/* Styling the individual dot */
+.swiper-pagination-bullet {
+    background-color: #bdc3c7;
+    /* Lighter grey for inactive dot */
+    opacity: 1;
+    height: 9px;
+    /* Slightly larger dots */
+    width: 9px;
+    margin: 0 5px !important;
+    transition: all 0.3s ease;
+}
+
+/* Styling the active dot */
+.swiper-pagination-bullet-active {
+    background-color: #3672b8;
+    width: 12px;
+    /* More prominent active dot */
+    height: 12px;
+    box-shadow: 0 0 0 3px rgba(54, 114, 184, 0.3);
+    /* Ring effect around active dot */
+}
+
+.view-more {
+    color: #3672b8;
+    text-decoration: none;
+    font-size: 1.05em;
+    /* Slightly larger text */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    /* More space between text and arrow */
+    white-space: nowrap;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+    color: #2c5e96;
+}
 
 /* ======================================= */
 /* 6. MEDIA QUERIES */
@@ -325,53 +551,62 @@ body {
 
 /* 📱 Max Width: 540px (Small Mobile) */
 @media (max-width: 540px) {
+
     /* Top Nav Simplification */
     .centered-nav {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
         border-radius: 0;
     }
+
     .nav-left {
         width: 100%;
         justify-content: center;
         margin-bottom: 10px;
         margin-right: 0;
     }
-    
+
     /* Hero Section */
     .text-content h1 {
         font-size: 32px;
     }
+
     .text-content p {
         font-size: 16px;
     }
+
     .image-container img {
-        max-width: 90%; 
+        max-width: 90%;
     }
-    
+
     /* Logo Marquee (Smallest size) */
     .marquee-row {
         font-size: 1rem;
-        padding: 20px 0; 
+        padding: 20px 0;
     }
+
     .marquee-content img {
         height: 25px;
     }
-    .marquee-content span:nth-child(even) { 
-        margin-right: 25px; 
+
+    .marquee-content span:nth-child(even) {
+        margin-right: 25px;
     }
+
     .marquee-left .marquee-content {
-        animation-duration: 40s; 
+        animation-duration: 40s;
     }
+
     .marquee-right .marquee-content {
-        animation-duration: 30s; 
+        animation-duration: 30s;
     }
-    
+
     /* Bottom Nav Refinement */
     .bottom-nav-bar .nav-item {
         font-size: 0.7em;
         padding: 3px;
     }
+
     .bottom-nav-bar .nav-item i {
         font-size: 1.3em;
     }
@@ -380,40 +615,50 @@ body {
 
 /* 💻 Max Width: 768px (Mobile/Tablet Transition) */
 @media (max-width: 768px) {
+
     /* --- NAVIGATION SWITCH (KEY CHANGE) --- */
     #desktop-nav-links {
-        display: none; /* Hides top desktop navigation */
+        display: none;
+        /* Hides top desktop navigation */
     }
+
     .bottom-nav-bar {
-        display: flex; /* Displays the bottom icon navigation bar */
+        display: flex;
+        /* Displays the bottom icon navigation bar */
         padding: 10px 0;
     }
+
     .bottom-nav-bar .nav-item span {
         /* Hides text labels for icon-only navigation */
-        display: none; 
+        display: none;
     }
+
     .bottom-nav-bar .nav-item i {
         /* Adjust icon size when text is hidden */
-        font-size: 1.7em; 
+        font-size: 1.7em;
         margin-bottom: 0;
     }
+
     /* -------------------------------------- */
-    
+
     /* Top Nav Simplification */
     .fixed-nav-wrapper {
-        padding: 10px 0; 
+        padding: 10px 0;
     }
+
     .centered-nav {
-        width: 90%; 
+        width: 90%;
         padding: 10px 15px;
-        border-radius: 10px; 
+        border-radius: 10px;
     }
+
     .nav-left {
         width: 100%;
-        justify-content: center; /* Center logo/name */
+        justify-content: center;
+        /* Center logo/name */
         margin-right: 0;
     }
-    
+
     /* Hero Section Stacking */
     .hero-section {
         flex-direction: column;
@@ -421,18 +666,22 @@ body {
         padding-top: 100px;
         padding: 100px 3%;
     }
+
     .text-content,
     .image-container {
         max-width: 100%;
         margin-bottom: 40px;
     }
+
     .text-content {
         order: 1;
     }
+
     .image-container {
         order: 2;
         justify-content: center;
     }
+
     .text-content h1 {
         font-size: 40px;
     }
@@ -442,58 +691,70 @@ body {
         font-size: 1.6em;
         padding: 15px 0;
     }
+
     .marquee-content img {
-        height: 32px; 
+        height: 32px;
     }
+
     .marquee-content span {
-        margin: 0 0 0 10px; 
+        margin: 0 0 0 10px;
     }
+
     .marquee-content span:nth-child(even) {
         margin-right: 30px;
     }
+
     .marquee-left .marquee-content {
-        animation-duration: 35s; 
+        animation-duration: 35s;
     }
+
     .marquee-right .marquee-content {
-        animation-duration: 25s; 
+        animation-duration: 25s;
     }
 }
 
 
 /* 🖥️ Max Width: 1220px (Larger Desktops/Laptops) */
 @media (max-width: 1220px) {
+
     /* Top Nav */
     .centered-nav {
         width: 95%;
         max-width: none;
     }
-    
+
     /* Hero Section */
     .hero-section {
         padding: 60px 3%;
     }
+
     .text-content h1 {
         font-size: 48px;
     }
 
     /* Logo Marquee (Desktop size adjustment) */
     .my-main-swiper {
-        font-size: x-small; 
+        font-size: x-small;
     }
+
     .marquee-row {
-        font-size: 1rem; 
+        font-size: 1rem;
         padding: 26px 0;
     }
+
     .marquee-content img {
-        height: 36px; 
+        height: 36px;
     }
+
     .marquee-content span:nth-child(even) {
-        margin-right: 40px; 
+        margin-right: 40px;
     }
+
     .marquee-left .marquee-content {
-        animation-duration: 30s; 
+        animation-duration: 30s;
     }
+
     .marquee-right .marquee-content {
-        animation-duration: 20s; 
+        animation-duration: 20s;
     }
 }
