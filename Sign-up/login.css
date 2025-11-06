@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+}
+
+body {
+  background: linear-gradient(135deg, #a3c9f9, #d9a7f9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  max-width: 1000px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.login-box {
+  width: 50%;
+  padding: 20px 30px;
+}
+
+.logo {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3b3b3b;
+}
+
+.title {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #222;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #6c63ff;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #a367ff;
+  box-shadow: 0 0 10px rgba(163, 103, 255, 0.3);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6c63ff, #a367ff);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #7b68ee, #b28dff);
+  box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.reset-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.reset-row p {
+  font-size: 0.95rem;
+}
+
+.reset-btn {
+  padding: 6px 14px;
+  border: 2px solid #6c63ff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #6c63ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 2px solid #999;
+}
+
+.divider span {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn img {
+  width: 30px;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #6c63ff;
+  transition: color 0.3s ease;
+}
+
+.signup a:hover {
+  color: #a367ff;
+}
+
+.image-box {
+  width: 45%;
+  text-align: center;
+}
+
+.image-box img {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 80px;
+  margin-left: -35px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-box {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .image-box img {
+    max-width: 250px;
+  }
+}
