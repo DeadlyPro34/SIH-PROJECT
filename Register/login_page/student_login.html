@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="module.css">
+  <style>
+    .form-section {
+      display: none;
+    }
+    .form-section.active {
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Student Registration</h1>
+    <form id="studentForm">
+
+      <!-- Personal Details -->
+      <div class="form-section active" id="personalSection">
+        <h2>Personal Details</h2>
+        <label>Name :</label>
+        <input type="text" name="name" required><br>
+
+        <label>Contact No. :</label>
+        <input type="tel" name="contact" required><br>
+
+        <label>Email ID :</label>
+        <input type="email" name="email" required><br>
+
+        <label>Address :</label>
+        <input type="text" name="address"><br>
+
+        <button type="button" id="nextBtn">Next</button>
+      </div>
+
+      <!-- College Details -->
+      <div class="form-section" id="collegeSection">
+        <h2>College Details</h2>
+
+        <label>Name of College/Institute/University :</label>
+        <input type="text" name="college" required><br>
+
+        <label>Enrollment No. :</label>
+        <input type="number" name="enroll" required><br>
+
+        <label>Branch :</label>
+        <input type="text" name="branch" required><br>
+
+        <label>Semester & Year :</label>
+        <input type="text" name="sem" required><br>
+
+        <label>College Contact No. :</label>
+        <input type="tel" name="college_contact" required><br>
+
+        <h3>Proof</h3>
+
+        <label>ID Card (Photo) :</label>
+        <input type="file" accept="image/*" required><br>
+
+        <label>LOR (PDF) :</label>
+        <input type="file" accept="application/pdf" required><br>
+
+        <label>AISHE Code :</label>
+        <input type="text" name="aishe" required><br>
+
+        <button type="button" id="backBtn">Back</button>
+        <button type="submit" class="register-btn">Register</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const nextBtn = document.getElementById('nextBtn');
+    const backBtn = document.getElementById('backBtn');
+    const personalSection = document.getElementById('personalSection');
+    const collegeSection = document.getElementById('collegeSection');
+    const form = document.getElementById('studentForm');
+
+    nextBtn.addEventListener('click', () => {
+      // Validate only the personal section inputs
+      const inputs = personalSection.querySelectorAll('input');
+      let valid = true;
+
+      inputs.forEach(input => {
+        if (!input.checkValidity()) {
+          input.reportValidity();
+          valid = false;
+        }
+      });
+
+      // Move to next section only if valid
+      if (valid) {
+        personalSection.classList.remove('active');
+        collegeSection.classList.add('active');
+      }
+    });
+
+    backBtn.addEventListener('click', () => {
+      collegeSection.classList.remove('active');
+      personalSection.classList.add('active');
+    });
+  </script>
+</body>
+</html>

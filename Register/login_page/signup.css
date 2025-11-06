@@ -1,0 +1,65 @@
+/* ---------- PlaceMint - Login Page (Blue Theme) ---------- */
+
+/* Background gradient */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #021024, #052659);
+  color: #C1E8FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container styling */
+.container {
+  background-color: #052659;
+  padding: 60px 80px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 20px rgba(2, 16, 36, 0.5);
+  text-align: center;
+  width: 400px;
+  border: 2px solid #5483B3;
+}
+
+/* Title */
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #C1E8FF;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  text-decoration: none;
+  color: #021024;
+  background-color: #7DA0CA;
+  padding: 14px 0;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #5483B3;
+  color: #C1E8FF;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}

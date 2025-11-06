@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Registration</title>
+  <link rel="stylesheet" href="module.css">
+
+  <script>
+    // Move to step 2 only if step 1 is valid
+    function showStep2() {
+      const form = document.getElementById("companyStep1");
+      if (form.checkValidity()) {
+        document.getElementById("companyStep1").style.display = "none";
+        document.getElementById("companyStep2").style.display = "block";
+      } else {
+        form.reportValidity();
+      }
+    }
+
+    // Go back to step 1
+    function showStep1() {
+      document.getElementById("companyStep2").style.display = "none";
+      document.getElementById("companyStep1").style.display = "block";
+    }
+
+    // Handle final submission
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      if (form.checkValidity()) {
+        alert("✅ Company Registration Submitted Successfully!");
+        form.reset();
+        showStep1();
+      } else {
+        form.reportValidity();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>🏢 Company Registration</h1>
+
+    <!-- STEP 1 -->
+    <form id="companyStep1" novalidate>
+      <h2>1️⃣ Basic Company Details</h2>
+
+      <label>Company Name :</label>
+      <input type="text" name="company_name" placeholder="TechMint Pvt. Ltd." required><br>
+
+      <label>Company Type :</label>
+      <select name="company_type" required>
+        <option value="">-- Select Type --</option>
+        <option>Startup</option>
+        <option>Private Limited</option>
+        <option>Public Limited</option>
+        <option>NGO</option>
+        <option>Partnership</option>
+      </select><br>
+
+      <label>Official Website :</label>
+      <input type="url" name="website" placeholder="https://www.techmint.com"><br>
+
+      <label>Registered Address :</label>
+      <textarea name="address" rows="2" placeholder="Street, City, State, PIN" required></textarea><br>
+
+      <label>Official Email (domain-based):</label>
+      <input type="email" name="official_email" placeholder="hr@techmint.com" required><br>
+
+      <label>Official Phone Number :</label>
+      <input type="tel" name="phone" placeholder="+91 9876543210" required><br>
+
+      <label>LinkedIn Profile :</label>
+      <input type="url" name="linkedin" placeholder="https://www.linkedin.com/company/techmint" required><br>
+
+      <h2>2️⃣ Company Registration Information</h2>
+
+      <label>CIN (Corporate Identification Number) :</label>
+      <input type="text" name="cin" placeholder="U12345MH2020PTC123456" required><br>
+
+      <label>GST Number (optional) :</label>
+      <input type="text" name="gst" placeholder="22AAAAA0000A1Z5"><br>
+
+      <label>Company Registration Certificate (PDF/Image) :</label>
+      <input type="file" accept=".pdf,image/*" required><br>
+
+      <label>Company Logo (optional) :</label>
+      <input type="file" accept="image/*"><br>
+
+      <button type="button" class="next-btn" onclick="showStep2()">Next</button>
+    </form>
+
+
+    <!-- STEP 2 -->
+    <form id="companyStep2" style="display:none;" onsubmit="handleSubmit(event)" novalidate>
+      <h2>3️⃣ Authorized Person (SPOC)</h2>
+
+      <label>Full Name :</label>
+      <input type="text" name="spoc_name" placeholder="John Doe" required><br>
+
+      <label>Designation :</label>
+      <input type="text" name="designation" placeholder="HR Manager" required><br>
+
+      <label>Official Email ID :</label>
+      <input type="email" name="spoc_email" placeholder="john@techmint.com" required><br>
+
+      <label>Mobile Number :</label>
+      <input type="tel" name="spoc_phone" placeholder="+91 9876543210" required><br>
+
+      <label>Employee ID / Business Card (upload) :</label>
+      <input type="file" accept="image/*,application/pdf" required><br>
+
+      <div class="button-group">
+        <button type="button" class="back-btn" onclick="showStep1()">Back</button>
+        <button type="submit" class="register-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

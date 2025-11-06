@@ -1,0 +1,96 @@
+/* ---------- PlaceMint - Modules (Student / College / Company) ---------- */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #C1E8FF, #052659);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* Form container */
+.form-container {
+  background: rgba(2, 16, 36, 0.85);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 480px;
+}
+
+/* Titles */
+h1, h2, h3 {
+  color: #C1E8FF;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Form labels and inputs */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #7DA0CA;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="file"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #5483B3;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #052659;
+  color: #C1E8FF;
+  font-size: 14px;
+}
+
+input::file-selector-button {
+  background-color: #7DA0CA;
+  color: #021024;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+input::file-selector-button:hover {
+  background-color: #C1E8FF;
+}
+
+/* Buttons */
+button, .register-btn, .next-btn, .back-btn {
+  background-color: #7DA0CA;
+  color: #021024;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+button:hover, .register-btn:hover, .next-btn:hover, .back-btn:hover {
+  background-color: #C1E8FF;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+}
