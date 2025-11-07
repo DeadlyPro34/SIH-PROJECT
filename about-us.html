@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ======================================= */
+        /* 1. CSS VARIABLES AND GLOBAL RESET */
+        /* ======================================= */
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Default text color for global elements, will be overridden by section-specific styles */
+            color: #1a1a1a; 
+        }
+
+        :root {
+            /* Branding Colors */
+            --light-cream: #F5F5F0;
+            --beige: #E6D8C3;
+            --dark-green: #31473A;
+            --nav-color: #EAE6DB; /* Used for the navigation background */
+            --logo-text: #4B5A47;
+            --footer-bg: #91915a;
+            
+            /* Text Colors */
+            --text-dark: #1a1a1a;
+            --text-light: #F5F5F0; 
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-cream);
+            padding-top: 100px; /* Space for the fixed nav */
+        }
+
+        /* ======================================= */
+        /* 2. NAVIGATION BAR STYLES */
+        /* ======================================= */
+        .fixed-nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .centered-nav {
+            background: var(--nav-color);
+            border-radius: 20px;
+            padding: 10px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .logo-img {
+            /* Placeholder for the logo image */
+            height: 30px;
+            width: 30px;
+            min-width: 30px;
+            margin-right: 8px;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+
+        .logo-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--logo-text);
+        }
+
+        /* Desktop Links */
+        #desktop-nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        #desktop-nav-links a {
+            color: var(--logo-text);
+            text-decoration: none;
+            font-size: 15px;
+            padding: 10px 15px;
+            margin: 0 5px;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        #desktop-nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        .sign-in-btn {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            border: none;
+            margin-left: 20px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .sign-in-btn:hover {
+            background-color: #2a3b32;
+            transform: translateY(-1px);
+        }
+
+
+        /* 3. BOTTOM MOBILE NAV BAR (Responsive) */
+        .bottom-nav-bar {
+            display: none; /* Hidden by default on desktop/large screens */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--nav-color);
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            justify-content: space-around;
+            align-items: center;
+            padding: 8px 0;
+            /* Mobile nav colors */
+            --mobile-nav-icon-color: #6d8e6a;
+            --mobile-nav-active-color: var(--dark-green);
+        }
+
+        .bottom-nav-bar .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--mobile-nav-icon-color);
+            padding: 8px 5px;
+            flex-grow: 1;
+            transition: color 0.3s ease;
+        }
+
+        .bottom-nav-bar .nav-item i {
+            font-size: 1.5em;
+            margin-bottom: 3px;
+            color: inherit;
+        }
+
+        .bottom-nav-bar .nav-item span {
+            color: inherit;
+            font-size: 0.75em;
+            display: block;
+        }
+
+        .bottom-nav-bar .nav-item:hover,
+        .bottom-nav-bar .nav-item.active {
+            color: var(--mobile-nav-active-color);
+        }
+
+        /* ======================================= */
+        /* 4. MAIN CONTENT (ABOUT PAGE) STYLES */
+        /* ======================================= */
+
+        .about-page-content {
+            max-width: 1000px;
+            margin: 40px auto 80px auto;
+            padding: 60px;
+            background-color: var(--beige);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-intro {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-top: 5px;
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: var(--dark-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h3 {
+            font-size: 1.7em;
+            font-weight: 700;
+            color: var(--dark-green); /* Changed to dark green for emphasis */
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .lead-text {
+            font-size: 1.15em;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .testimonial {
+            margin: 80px 0;
+            text-align: center;
+            padding: 50px 30px;
+            background-color: var(--light-cream);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        blockquote {
+            border: none;
+            margin: 0;
+        }
+
+        .testimonial p {
+            font-size: 2.2em;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark-green);
+        }
+
+        cite {
+            display: block;
+            margin-top: 25px;
+            font-size: 1.1em;
+            font-style: normal;
+            color: #666;
+        }
+
+        .key-pillars {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(49, 71, 58, 0.2);
+        }
+
+        .pillar-card {
+            flex: 1;
+            min-width: 280px;
+            padding: 20px;
+            background-color: var(--light-cream);
+            border-radius: 8px;
+        }
+        
+        .pillar-card p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        /* ======================================= */
+        /* 5. FOOTER STYLES */
+        /* ======================================= */
+        .main-footer {
+            background-color: var(--footer-bg);
+            color: var(--text-light);
+            padding: 40px 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .footer-content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .footer-branding {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-branding h3 {
+            color: var(--text-light);
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .footer-branding p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            max-width: 350px;
+            color: var(--text-light);
+        }
+
+        .social-icons span {
+            margin-right: 15px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            color: var(--text-light);
+        }
+        
+        .social-icons span:hover {
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        .footer-links h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ======================================= */
+        /* 6. MEDIA QUERIES (Responsiveness) */
+        /* ======================================= */
+
+        /* Tablet/Small Desktop (Max Width: 1024px) */
+        @media (max-width: 1024px) {
+            .about-page-content {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 40px;
+            }
+        }
+
+        /* 💻 Tablet/Small Desktop (Max Width: 768px) */
+        @media (max-width: 768px) {
+            
+            body {
+                padding-top: 70px; /* Adjust for smaller fixed nav */
+            }
+            
+            /* Hide top desktop navigation */
+            #desktop-nav-links {
+                display: none;
+            }
+
+            /* Display the bottom icon navigation bar */
+            .bottom-nav-bar {
+                display: flex;
+                padding: 10px 0;
+            }
+
+            /* Top Nav Simplification */
+            .fixed-nav-wrapper {
+                padding: 10px 0;
+            }
+
+            .centered-nav {
+                width: 90%;
+                padding: 10px 15px;
+                border-radius: 10px;
+            }
+
+            .nav-left {
+                width: 100%;
+                justify-content: center;
+                margin-right: 0;
+            }
+            
+            /* Main Content Adjustments */
+            .about-page-content {
+                padding: 30px 20px;
+                margin-bottom: 70px; /* Space for the bottom nav */
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .testimonial p {
+                font-size: 1.8em;
+            }
+            
+            .key-pillars {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            /* Footer Adjustments */
+            .footer-content-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .footer-branding {
+                min-width: auto;
+            }
+            
+            .footer-branding p {
+                margin: 0 auto;
+            }
+
+            .footer-links {
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+                gap: 30px;
+            }
+            
+            .footer-links > div {
+                flex: 1 1 40%; /* Allow link columns to wrap */
+            }
+            
+            .footer-links ul {
+                text-align: center;
+            }
+        }
+
+        /* 📱 Mobile (Max Width: 540px) */
+        @media (max-width: 540px) {
+            .bottom-nav-bar .nav-item {
+                font-size: 0.7em;
+                padding: 5px;
+            }
+
+            .bottom-nav-bar .nav-item i {
+                font-size: 1.3em;
+            }
+            
+            .about-page-content {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .testimonial p {
+                font-size: 1.5em;
+            }
+            
+            .lead-text {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed-nav-wrapper">
+        <nav class="centered-nav">
+            <div class="nav-left">
+                <img src="logo.png" alt="PLACEMINT Logo" class="logo-img">
+                <span class="logo-name">PLACEMINT</span>
+            </div>
+
+            <div class="nav-right" id="desktop-nav-links">
+                <a href="../SIH-PROJECT/index.htm">Home</a>
+                <a href="#">Internships</a>
+                <a href="#">Jobs</a>
+                <a href="#">Blog</a>
+                <a href="../SIH-PROJECT/Register/register.html">Registration</a>
+                <button class="sign-in-btn">SIGN IN</button>
+            </div>
+
+            <nav class="bottom-nav-bar" id="mobile-bottom-nav">
+                <a href="../SIH-PROJECT/index.htm" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Internships</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Jobs</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Sign In</span>
+                </a>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="about-page-content">
+
+        <section class="hero-intro">
+            <p class="subtitle">From Campus to Career</p>
+            <h1>The Industrial Advantage Starts Here</h1>
+            <p class="lead-text">
+                The first step into a lasting industrial career isn't just a degree; it's the right experience. 
+                On one hand, you've built your knowledge base in the classroom, ready to contribute. On the other, the industrial world has its own set of rules to master: safety protocols, complex workflows, and hands-on skill execution. 
+                Are you applying for roles that align with industry demand? Do you know the critical skills that turn an intern into a full-time hire? Our program is the bridge that turns potential into performance.
+            </p>
+        </section>
+
+        <section class="testimonial">
+            <blockquote>
+                <p>"Every hour spent in the internship is an investment in your industrial future."</p>
+                <cite>-Alex Duke, Engineering Lead</cite>
+            </blockquote>
+        </section>
+
+        <section class="key-pillars">
+            
+            <div class="pillar-card">
+                <h3>The Launchpad</h3>
+                <p>
+                    Securing a successful industrial career is both a challenge and an opportunity. On the one hand, you have the academic knowledge; on the other, you need the hands-on experience. Our program is the essential link between the two.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <h3>The Skillset</h3>
+                <p>
+                    Are you building the technical skills the industry demands? Are you linking your theoretical knowledge to practical, on-site problem-solving? An internship here turns potential into a professional advantage.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <h3>The Strategy</h3>
+                <p>
+                    It's not enough to just work hard—you need to work smart. We focus on developing the core competencies that recruiters look for first, ensuring your experience directly maps to the industrial roles you want.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-branding">
+                <h3>PlaceMint</h3>
+                <p>We connect students and professionals with the best internship and industrial job opportunities.</p>
+                <div class="social-icons">
+                    <span>&#9416;</span> <span>in</span> <span>X</span>  </div>
+            </div>
+            <nav class="footer-links">
+                <div>
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Core features</a></li>
+                        <li><a href="#">Pro experience</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Learn more</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case studies</a></li>
+                        <li><a href="#">Customer stories</a></li>
+                        <li><a href="#">Best practices</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navItems = document.querySelectorAll('.bottom-nav-bar .nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    // This prevents the link from navigating, remove this line if you want the links to work
+                    // e.preventDefault(); 
+                    
+                    navItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
