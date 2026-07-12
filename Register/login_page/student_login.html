@@ -107,6 +107,24 @@
       collegeSection.classList.remove('active');
       personalSection.classList.add('active');
     });
+
+    // Handle final registration submission
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop page reload
+      if (form.checkValidity()) {
+        // TODO: send to backend via fetch()
+        // Example:
+        // fetch('/api/register/student', { method: 'POST', body: new FormData(form) });
+
+        alert("✅ Student Registration Submitted Successfully!");
+        form.reset();
+        // Return to the first section
+        collegeSection.classList.remove('active');
+        personalSection.classList.add('active');
+      } else {
+        form.reportValidity();
+      }
+    });
   </script>
 </body>
 </html>
